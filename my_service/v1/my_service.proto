@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package my_service.v1;
+
+option go_package = "github.com/suzushin54/go-api-with-connect/pb";
+
+service MyService {
+  rpc HelloWorld (HelloWorldRequest) returns (HelloWorldResponse) {}
+}
+
+message HelloWorldRequest {
+  string name = 1;
+}
+
+message HelloWorldResponse {
+  string message = 1;
+}
